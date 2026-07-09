@@ -1,0 +1,63 @@
+﻿<Window x:Class="BatchLauncher.AddSoftwareDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="添加软件" 
+        Height="300" Width="450"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="CanResize"
+        MinHeight="280" MinWidth="400">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- 0: 软件名称标签 -->
+            <RowDefinition Height="Auto"/>
+            <!-- 1: 软件名称输入 -->
+            <RowDefinition Height="Auto"/>
+            <!-- 2: 程序路径标签 -->
+            <RowDefinition Height="Auto"/>
+            <!-- 3: 程序路径+浏览 -->
+            <RowDefinition Height="Auto"/>
+            <!-- 4: 启动参数标签 -->
+            <RowDefinition Height="*"/>
+            <!-- 5: 参数输入框（会拉伸） -->
+            <RowDefinition Height="Auto"/>
+            <!-- 6: 按钮区域（固定在底部） -->
+        </Grid.RowDefinitions>
+
+        <!-- 第0行 -->
+        <TextBlock Text="软件名称:" Margin="0,0,0,5"/>
+
+        <!-- 第1行 -->
+        <TextBox x:Name="txtName" Grid.Row="1" Margin="0,0,0,10"/>
+
+        <!-- 第2行 -->
+        <TextBlock Grid.Row="2" Text="程序路径:" Margin="0,0,0,5"/>
+
+        <!-- 第3行 -->
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtPath" Grid.Column="0" Margin="0,0,5,0"/>
+            <Button x:Name="btnBrowse" Grid.Column="1" Content="浏览" Width="60" Click="Browse_Click"/>
+        </Grid>
+
+        <!-- 第4行 -->
+        <TextBlock Grid.Row="4" Text="启动参数(可选):" Margin="0,10,0,5"/>
+
+        <!-- 第5行 -->
+        <TextBox x:Name="txtArguments" Grid.Row="5" Margin="0,0,0,10"/>
+
+        <!-- 第7行：按钮区域 -->
+        <StackPanel Grid.Row="7" Orientation="Horizontal" 
+                    HorizontalAlignment="Center"
+                    Margin="0,10,0,0">
+            <Button x:Name="btnOK" Content="确定" Width="75" Height="30" 
+                    Margin="0,0,10,0" Click="OK_Click"/>
+            <Button x:Name="btnCancel" Content="取消" Width="75" Height="30" 
+                    Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
