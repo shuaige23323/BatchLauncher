@@ -1,6 +1,6 @@
 # BatchLauncher — 批量启动器
 
-https://img.shields.io/badge/%E8%A2%81%E5%B0%8F%E5%BA%B7-repo-blue
+<img alt="Static Badge" src="https://img.shields.io/badge/%E8%A2%81%E5%B0%8F%E5%BA%B7-repo-blue">
 
 ## 项目概述
 
