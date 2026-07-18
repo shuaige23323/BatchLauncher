@@ -1,5 +1,7 @@
 # BatchLauncher — 批量启动器
 
+https://img.shields.io/badge/%E8%A2%81%E5%B0%8F%E5%BA%B7-repo-blue
+
 ## 项目概述
 
 BatchLauncher 是一个基于 **WPF (.NET 8)** 的 Windows 桌面应用程序，用于管理和批量启动多个软件。用户可以添加软件（支持路径和启动参数），勾选后一键启动选中项或全部启动，配置会持久化到本地。
